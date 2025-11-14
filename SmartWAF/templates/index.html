@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SmartWAF - Test Page</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>SmartWAF — Demo Page</h1>
+      <p>Enter text below to simulate user input. The WAF will block common attacks.</p>
+      <form action="/submit" method="post">
+        <textarea name="user_input" rows="6" placeholder="Type something..."></textarea><br>
+        <button type="submit">Send</button>
+      </form>
+      <hr>
+      <p><a href="/login">Admin Login</a> • <a href="/smartadmin">Admin Dashboard</a></p>
+    </div>
+  </body>
+</html>

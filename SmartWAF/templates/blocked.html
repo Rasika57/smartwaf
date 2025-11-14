@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Blocked - SmartWAF</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>🚫 Request Blocked</h1>
+      <p>Detected attack type: <strong>{{ attack_type }}</strong></p>
+      <p>Blocked input:</p>
+      <pre>{{ input_text }}</pre>
+      <p><a href="/">Back</a></p>
+    </div>
+  </body>
+</html>

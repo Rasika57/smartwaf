@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SmartWAF Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>🚨 Blocked Requests</h1>
+      <p><a href="/logout">Logout</a> • <a href="/">Home</a></p>
+      {% if rows %}
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Time (UTC)</th><th>Type</th><th>IP</th><th>Input</th></tr>
+        </thead>
+        <tbody>
+          {% for r in rows %}
+          <tr>
+            <td>{{ r['id'] }}</td>
+            <td>{{ r['created_at'] }}</td>
+            <td>{{ r['attack_type'] }}</td>
+            <td>{{ r['ip'] }}</td>
+            <td><pre>{{ r['input_text'] }}</pre></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p>No blocked requests yet.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
